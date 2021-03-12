@@ -12,20 +12,30 @@ local ergonomic_seed = require("ergonomic_seed")
 ## Usage
 
 ```lua
-local result = ergonomic_seed:generate()
-print(result) -- abdominal-beneficial-aardvark
+local result, hash = ergonomic_seed:generate()
+print(result, hash) -- zippy-seedy-scorpion  5473059125845893634
 ```
 
 ## Options
 
 ```lua
-local result = ergonomic_seed:generate({
-    seed=902,
-    format='upper', -- lower, upper, capitalize
-    delimiter='.',
-    length=2,
-    adjectives={'ablaze', 'binding'},
-    nouns={'aardwolf', 'bandicoot'}
-  })
-  print(result) -- BINDING.AARDWOLF
+local result, hash = ergonomic_seed:generate({
+    seed = 902,
+    format = 'capitalize',
+    delimiter = '',
+    length = 2,
+    adjectives = {'ablaze', 'binding'},
+    nouns = {'aardwolf', 'bandicoot'}
+})
+print(result, hash) -- BINDING.AARDWOLF  -6559100286397047746
+```
+
+## Unit Tests
+
+```bash
+$ cd {workspace}
+$ lua ergonomic_seed_test.lua 
+.............
+Ran 13 tests in 0.001 seconds, 13 successes, 0 failures
+OK
 ```
