@@ -27,7 +27,7 @@ local result, hash = ergonomic_seed:generate({
     adjectives = {'ablaze', 'binding'},
     nouns = {'aardwolf', 'bandicoot'}
 })
-print(result, hash) -- BINDING.AARDWOLF  -6559100286397047746
+print(result, hash) -- BindingAardwolf	-1709859011706699856
 ```
 
 ## Unit Tests
