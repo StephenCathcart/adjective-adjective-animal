@@ -16,6 +16,6 @@ dependencies = {
 build = {
     type = "builtin",
     modules = {
-        log = "ergonomic_seed.lua",
+        ergonomic_seed = "ergonomic_seed.lua",
     }
 }
